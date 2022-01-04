@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{eacee47e-ca59-41c8-a5f7-59e1adf45f99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{e5831064-881b-4f40-ac30-fe62d897fb43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc">
+      <UniqueIdentifier>{e12f2f02-2b5e-4140-bfe8-ce1303a04ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="methods">
+      <UniqueIdentifier>{7dc37f37-b35e-4275-ba8d-9d5a87c07a4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="methods\src">
+      <UniqueIdentifier>{59f43a3b-f05f-4427-afc4-8b93526e38cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="methods\h">
+      <UniqueIdentifier>{1e6dd97b-b2d7-4d19-a46c-46dee18fa406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="appinfo">
+      <UniqueIdentifier>{92e49caa-1f05-41bd-b403-3e3931979141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="appinfo\x64">
+      <UniqueIdentifier>{3faad89c-b296-4c61-92d1-fcbe22cedc07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="appinfo\x86">
+      <UniqueIdentifier>{c993d262-2732-4a04-95f7-e3e0966b28c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc\w8_10">
+      <UniqueIdentifier>{fa150873-58e1-4f6e-970b-180446543a12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc\w7">
+      <UniqueIdentifier>{a9a1d4d7-a212-4858-801e-a56c3e9de28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc\w7\x64">
+      <UniqueIdentifier>{cf834ca8-c641-4522-8f96-ade51e2f795e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc\w7\x86">
+      <UniqueIdentifier>{18f0d89d-72ef-4aba-a44b-1c92be4ef2a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc\w8_10\x64">
+      <UniqueIdentifier>{a7870547-97e0-4942-9c04-8756eacde1b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pcasvc\w8_10\x86">
+      <UniqueIdentifier>{e314893d-ac30-41dd-b7d9-8523828531d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{145ed457-390c-4609-8616-79c169a2fd6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{4cfea1c9-7197-43f7-9f1f-5ccfbb0df76a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\ntos">
+      <UniqueIdentifier>{4a4f0e2b-8e5c-42bd-9852-98c1d5cc0136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\hde">
+      <UniqueIdentifier>{04556809-b6b1-4544-aa49-fc11f05f5017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\src">
+      <UniqueIdentifier>{3abb3cb6-7d30-4aa2-913b-6f03a83e851b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\h">
+      <UniqueIdentifier>{1190e3f6-ea36-4653-aa04-48418eb4fb13}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\sup.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stub.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\makecab.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fusutil.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compress.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\aic.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\api0cradle.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\azagarampur.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\comsup.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\dwells.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\hakril.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\hybrids.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\methods.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\rinn.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\shellsup.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\tyranid.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\methods\wusa.c">
+      <Filter>methods\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\appinfo\x86-32\appinfo32.c">
+      <Filter>appinfo\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\appinfo\x64\appinfo64.c">
+      <Filter>appinfo\x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcasvc\w8_10\x86-32\pcasvc32.c">
+      <Filter>pcasvc\w8_10\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcasvc\w8_10\x64\pcasvc64.c">
+      <Filter>pcasvc\w8_10\x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcasvc\w7\x64\pcasvc7_64.c">
+      <Filter>pcasvc\w7\x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcasvc\w7\x86-32\pcasvc7_32.c">
+      <Filter>pcasvc\w7\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tests\test.c">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\hde\hde64.c">
+      <Filter>Shared\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_filename.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strcat.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strcmp.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strcmpi.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strcpy.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strend.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strlen.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strncmp.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strncmpi.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strncpy.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\_strstri.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\cmdline.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\ldr.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\strtoi.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\strtoul.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\u64tohex.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\u64tostr.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\ultohex.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\ultostr.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\util.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\windefend.c">
+      <Filter>Shared\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared\XGetopt.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\uas.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sup.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stub.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\makecab.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\global.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fusutil.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encresource.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compress.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bin64res.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bin32res.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\aic.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\api0cradle.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\azagarampur.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\comsup.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\dwells.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\elvint.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\hakril.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\hybrids.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\methods.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\rinn.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\shellsup.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\tyranid.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\methods\wusa.h">
+      <Filter>methods\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\appinfo\x86-32\appinfo32.h">
+      <Filter>appinfo\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\appinfo\x64\appinfo64.h">
+      <Filter>appinfo\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcasvc\w8_10\x86-32\pcasvc32.h">
+      <Filter>pcasvc\w8_10\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcasvc\w8_10\x64\pcasvc64.h">
+      <Filter>pcasvc\w8_10\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcasvc\w7\x64\pcasvc7_64.h">
+      <Filter>pcasvc\w7\x64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcasvc\w7\x86-32\pcasvc7_32.h">
+      <Filter>pcasvc\w7\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tests\test.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macros.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\hde\hde64.h">
+      <Filter>Shared\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\hde\pstdint.h">
+      <Filter>Shared\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\hde\table64.h">
+      <Filter>Shared\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\ntos\ntbuilds.h">
+      <Filter>Shared\ntos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\ntos\ntos.h">
+      <Filter>Shared\ntos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\ntos\ntsxs.h">
+      <Filter>Shared\ntos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\_filename.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\cmdline.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\consts.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\ldr.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\libinc.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\minirtl.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\rtltypes.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\shared.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\util.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\windefend.h">
+      <Filter>Shared\h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared\XGetopt.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

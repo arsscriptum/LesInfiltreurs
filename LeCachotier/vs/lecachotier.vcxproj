@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="QtConf">
+    <QtVersion>5.12.4</QtVersion>
+    <QTDIR>$(QtRootPath)</QTDIR>
+    <QtExternalDir>$(QtRootPath)</QtExternalDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{47711EAC-7501-4995-8CA2-CE81DC72648F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>lecachotier</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(ProjectDir)cfg\lecachotier.props" Label="ProjectConfig" />
+  <Import Project="$(ProjectDir)cfg\dejainsight.props" Condition="'$(dejainsight_integration)' == ''" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemGroup>
+    <RootQRCFiles Include="$(SolutionDir)*.qrc" />
+    <AllPs1Files Include="$(SolutionDir)res\**\*.ps1" />
+    <RCCFiles Include="$(SolutionDir)*.rcc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>lecachotier</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="CustomClean" BeforeTargets="AfterClean">
+    <Message Text="Custom Clean" Importance="high" />
+    <ItemGroup>
+      <_CustomFilesToDelete Include="$(OutDir)\$(RootNamespace).*" />
+    </ItemGroup>
+    <Delete Files="@(_CustomFilesToDelete)" />
+  </Target>
+  <ItemGroup Condition="'$(UsingQt5)' == '1'">
+    <QtRcc Include="$(AppResourceFile)">
+      <QmlCacheGenerate>false</QmlCacheGenerate>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\aic.c" />
+    <ClCompile Include="..\src\appinfo\x64\appinfo64.c" />
+    <ClCompile Include="..\src\appinfo\x86-32\appinfo32.c" />
+    <ClCompile Include="..\src\compress.c" />
+    <ClCompile Include="..\src\fusutil.c" />
+    <ClCompile Include="..\src\main.c" />
+    <ClCompile Include="..\src\makecab.c" />
+    <ClCompile Include="..\src\methods\api0cradle.c" />
+    <ClCompile Include="..\src\methods\azagarampur.c" />
+    <ClCompile Include="..\src\methods\comsup.c" />
+    <ClCompile Include="..\src\methods\dwells.c" />
+    <ClCompile Include="..\src\methods\hakril.c" />
+    <ClCompile Include="..\src\methods\hybrids.c" />
+    <ClCompile Include="..\src\methods\methods.c" />
+    <ClCompile Include="..\src\methods\rinn.c" />
+    <ClCompile Include="..\src\methods\shellsup.c" />
+    <ClCompile Include="..\src\methods\tyranid.c" />
+    <ClCompile Include="..\src\methods\wusa.c" />
+    <ClCompile Include="..\src\pcasvc\w7\x64\pcasvc7_64.c" />
+    <ClCompile Include="..\src\pcasvc\w7\x86-32\pcasvc7_32.c" />
+    <ClCompile Include="..\src\pcasvc\w8_10\x64\pcasvc64.c" />
+    <ClCompile Include="..\src\pcasvc\w8_10\x86-32\pcasvc32.c" />
+    <ClCompile Include="..\src\shared\cmdline.c" />
+    <ClCompile Include="..\src\shared\hde\hde64.c" />
+    <ClCompile Include="..\src\shared\ldr.c" />
+    <ClCompile Include="..\src\shared\strtoi.c" />
+    <ClCompile Include="..\src\shared\strtoul.c" />
+    <ClCompile Include="..\src\shared\u64tohex.c" />
+    <ClCompile Include="..\src\shared\u64tostr.c" />
+    <ClCompile Include="..\src\shared\ultohex.c" />
+    <ClCompile Include="..\src\shared\ultostr.c" />
+    <ClCompile Include="..\src\shared\util.c" />
+    <ClCompile Include="..\src\shared\windefend.c" />
+    <ClCompile Include="..\src\shared\XGetopt.c" />
+    <ClCompile Include="..\src\shared\_filename.c" />
+    <ClCompile Include="..\src\shared\_strcat.c" />
+    <ClCompile Include="..\src\shared\_strcmp.c" />
+    <ClCompile Include="..\src\shared\_strcmpi.c" />
+    <ClCompile Include="..\src\shared\_strcpy.c" />
+    <ClCompile Include="..\src\shared\_strend.c" />
+    <ClCompile Include="..\src\shared\_strlen.c" />
+    <ClCompile Include="..\src\shared\_strncmp.c" />
+    <ClCompile Include="..\src\shared\_strncmpi.c" />
+    <ClCompile Include="..\src\shared\_strncpy.c" />
+    <ClCompile Include="..\src\shared\_strstri.c" />
+    <ClCompile Include="..\src\stub.c" />
+    <ClCompile Include="..\src\sup.c" />
+    <ClCompile Include="..\src\tests\test.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\aic.h" />
+    <ClInclude Include="..\src\appinfo\x64\appinfo64.h" />
+    <ClInclude Include="..\src\appinfo\x86-32\appinfo32.h" />
+    <ClInclude Include="..\src\bin32res.h" />
+    <ClInclude Include="..\src\bin64res.h" />
+    <ClInclude Include="..\src\compress.h" />
+    <ClInclude Include="..\src\encresource.h" />
+    <ClInclude Include="..\src\fusutil.h" />
+    <ClInclude Include="..\src\global.h" />
+    <ClInclude Include="..\src\macros.h" />
+    <ClInclude Include="..\src\makecab.h" />
+    <ClInclude Include="..\src\methods\api0cradle.h" />
+    <ClInclude Include="..\src\methods\azagarampur.h" />
+    <ClInclude Include="..\src\methods\comsup.h" />
+    <ClInclude Include="..\src\methods\dwells.h" />
+    <ClInclude Include="..\src\methods\elvint.h" />
+    <ClInclude Include="..\src\methods\hakril.h" />
+    <ClInclude Include="..\src\methods\hybrids.h" />
+    <ClInclude Include="..\src\methods\methods.h" />
+    <ClInclude Include="..\src\methods\rinn.h" />
+    <ClInclude Include="..\src\methods\shellsup.h" />
+    <ClInclude Include="..\src\methods\tyranid.h" />
+    <ClInclude Include="..\src\methods\wusa.h" />
+    <ClInclude Include="..\src\pcasvc\w7\x64\pcasvc7_64.h" />
+    <ClInclude Include="..\src\pcasvc\w7\x86-32\pcasvc7_32.h" />
+    <ClInclude Include="..\src\pcasvc\w8_10\x64\pcasvc64.h" />
+    <ClInclude Include="..\src\pcasvc\w8_10\x86-32\pcasvc32.h" />
+    <ClInclude Include="..\src\resource.h" />
+    <ClInclude Include="..\src\shared\cmdline.h" />
+    <ClInclude Include="..\src\shared\consts.h" />
+    <ClInclude Include="..\src\shared\hde\hde64.h" />
+    <ClInclude Include="..\src\shared\hde\pstdint.h" />
+    <ClInclude Include="..\src\shared\hde\table64.h" />
+    <ClInclude Include="..\src\shared\ldr.h" />
+    <ClInclude Include="..\src\shared\libinc.h" />
+    <ClInclude Include="..\src\shared\minirtl.h" />
+    <ClInclude Include="..\src\shared\ntos\ntbuilds.h" />
+    <ClInclude Include="..\src\shared\ntos\ntos.h" />
+    <ClInclude Include="..\src\shared\ntos\ntsxs.h" />
+    <ClInclude Include="..\src\shared\rtltypes.h" />
+    <ClInclude Include="..\src\shared\shared.h" />
+    <ClInclude Include="..\src\shared\util.h" />
+    <ClInclude Include="..\src\shared\windefend.h" />
+    <ClInclude Include="..\src\shared\XGetopt.h" />
+    <ClInclude Include="..\src\shared\_filename.h" />
+    <ClInclude Include="..\src\stub.h" />
+    <ClInclude Include="..\src\sup.h" />
+    <ClInclude Include="..\src\tests\test.h" />
+    <ClInclude Include="..\src\uas.h" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="QtConf">
+    <QtVersion>5.12.4</QtVersion>
+    <QTDIR>$(QtRootPath)</QTDIR>
+    <QtExternalDir>$(QtRootPath)</QtExternalDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{47711eac-7501-4995-8ca2-ce81dc72648f}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ettoufeur</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(ProjectDir)cfg\app.props" Label="ProjectConfig" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemGroup>
+    <RootQRCFiles Include="$(SolutionDir)*.qrc" />
+    <AllPs1Files Include="$(SolutionDir)res\**\*.ps1" />
+    <RCCFiles Include="$(SolutionDir)*.rcc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <ClCompile Include="$(ProjectRoot)src\stdafx.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\cmdline.cpp" />
+    <ClCompile Include="..\src\ettoufeur\common.cpp" />
+    <ClCompile Include="..\src\ettoufeur\getopt.cpp" />
+    <ClCompile Include="..\src\init.cpp" />
+    <ClCompile Include="..\src\windows-api-ex.cpp" />
+    <ClCompile Include="$(ProjectRoot)src\ettoufeur\Driverloading.cpp" />
+    <ClCompile Include="$(ProjectRoot)src\ettoufeur\main.cpp" />
+    <ClCompile Include="$(ProjectRoot)src\ettoufeur\ppl.cpp" />
+    <ClCompile Include="$(ProjectRoot)src\ettoufeur\Process.cpp" />
+    <ClCompile Include="$(ProjectRoot)src\ettoufeur\ProcExp.cpp" />
+    <ClCompile Include="$(ProjectRoot)src\ettoufeur\resource.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectRoot)src\ettoufeur\common.h" />
+    <ClInclude Include="$(ProjectRoot)src\ettoufeur\Driverloading.h" />
+    <ClInclude Include="$(ProjectRoot)src\ettoufeur\ppl.h" />
+    <ClInclude Include="$(ProjectRoot)src\ettoufeur\Processes.h" />
+    <ClInclude Include="$(ProjectRoot)src\ettoufeur\ProcExp.h" />
+    <ClInclude Include="$(ProjectRoot)src\ettoufeur\resource.h" />
+    <ClInclude Include="..\src\cmdline.h" />
+    <ClInclude Include="..\src\ettoufeur\getopt.h" />
+    <ClInclude Include="..\src\macros.h" />
+    <ClInclude Include="..\src\nowarns.h" />
+    <ClInclude Include="..\src\stdafx.h" />
+    <ClInclude Include="..\src\targetver.h" />
+    <ClInclude Include="..\src\windows-api-ex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(ProjectRoot)src\ettoufeur\ettoufeur.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="CustomClean" BeforeTargets="AfterClean">
+    <Message Text="Custom Clean" Importance="high" />
+    <ItemGroup>
+      <_CustomFilesToDelete Include="$(OutDir)\$(RootNamespace).*" />
+    </ItemGroup>
+    <Delete Files="@(_CustomFilesToDelete)" />
+  </Target>
+  <ItemGroup Condition="'$(UsingQt5)' == '1'">
+    <QtRcc Include="$(AppResourceFile)">
+      <QmlCacheGenerate>false</QmlCacheGenerate>
+    </QtRcc>
+  </ItemGroup>
+</Project>
