@@ -92,7 +92,9 @@ goto :init
 	if not exist bin ( mkdir bin )
 	call %__lib_out% :__out_underline_yel "STEP 1) LeCachotier"
 	pushd "%__script_path%\LeCachotier"
+	call %__lib_out% :__out_n_l_gry " building ..."
 	call Build.bat > NUL
+	call %__lib_out% :__out_d_grn " SUCCESS"
 	popd
 	goto :build_LePlacotteur
 
@@ -100,7 +102,9 @@ goto :init
 	if not exist bin ( mkdir bin )
 	call %__lib_out% :__out_underline_yel "STEP 2) LePlacotteur"
 	pushd "%__script_path%\LePlacotteur"
+	call %__lib_out% :__out_n_l_gry " building ..."
 	call Build.bat > NUL
+	call %__lib_out% :__out_d_grn " SUCCESS"
 	popd
 	goto :build_LeConstant
 
@@ -108,7 +112,9 @@ goto :init
 	if not exist bin ( mkdir bin )
 	call %__lib_out% :__out_underline_yel "STEP 3) LeConstant"
 	pushd "%__script_path%\LeConstant"
+	call %__lib_out% :__out_n_l_gry " building ..."
 	call Build.bat > NUL
+	call %__lib_out% :__out_d_grn " SUCCESS"
 	popd
 	goto :build_LEttoufeur
 
@@ -116,7 +122,9 @@ goto :init
 	if not exist bin ( mkdir bin )
 	call %__lib_out% :__out_underline_yel "STEP 4) LEttoufeur"
 	pushd "%__script_path%\LEttoufeur"
+	call %__lib_out% :__out_n_l_gry " building ..."
 	call Build.bat > NUL
+	call %__lib_out% :__out_d_grn " SUCCESS"
 	popd
 	goto :export_binaries
 	::goto :export_binaries
