@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\SuspendorResumeTid.cpp" />
+    <ClCompile Include="..\src\dll\dllmain.cpp">
+      <Filter>dll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dll\stdafx.cpp">
+      <Filter>dll</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="dll">
+      <UniqueIdentifier>{85b2c9c6-2687-4ea7-ad2d-306e406ca5d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\dll\stdafx.h">
+      <Filter>dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dll\targetver.h">
+      <Filter>dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SuspendorResumeTid.h" />
+  </ItemGroup>
+</Project>
