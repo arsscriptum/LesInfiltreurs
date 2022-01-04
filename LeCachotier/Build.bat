@@ -63,9 +63,7 @@ goto :init
 
 :prebuild_header
     call %__lib_date% :getbuilddate
-    call %__lib_out% :__out_d_red " ======================================================================="
-    call %__lib_out% :__out_l_red " Compilation started for %cd%  %__target%"  
-    call %__lib_out% :__out_d_red " ======================================================================="
+    call %__lib_out% :__out_underline_red " Compilation started for %cd%  %__target%"  
     call :build
     goto :eof
 
@@ -131,8 +129,8 @@ goto :init
         goto :finished
         )
     ::call :build_x86
-    ::call :build_Release
-    call :protek
+    call :build_Release
+    ::call :protek
     goto :finished
 
 
